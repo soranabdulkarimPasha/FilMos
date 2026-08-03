@@ -1,0 +1,8 @@
+{
+  "primary_split_and_training_seed": 42,
+  "bootstrap_seed": 2026,
+  "deterministic_cudnn": true,
+  "cudnn_benchmark": false,
+  "paired_run_seed_schedule": null,
+  "paired_run_seed_schedule_status": "Not found in the supplied project artifacts; authors must insert the five actual run seeds before public release."
+}

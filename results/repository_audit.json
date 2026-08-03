@@ -1,0 +1,62 @@
+{
+  "technical_checks_ok": true,
+  "release_ready": false,
+  "checks": {
+    "public_names": {
+      "ok": true,
+      "offending_paths": []
+    },
+    "split_manifest": {
+      "ok": true,
+      "rows": 780
+    },
+    "test_predictions": {
+      "ok": true,
+      "rows": 118,
+      "confusion_matrix": [
+        [
+          63,
+          3,
+          0
+        ],
+        [
+          5,
+          27,
+          0
+        ],
+        [
+          0,
+          0,
+          20
+        ]
+      ]
+    },
+    "architecture_and_checkpoints": {
+      "ok": true,
+      "trainable_parameters": 1288966,
+      "checkpoints": {
+        "filmos_net_primary_seed42.pt": {
+          "epoch": 13,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        "filmos_net_cold_start_seed42.pt": {
+          "epoch": 6,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        "filmos_net_training_partition_initialization_seed42.pt": {
+          "epoch": 8,
+          "missing_keys": [],
+          "unexpected_keys": []
+        }
+      }
+    },
+    "paired_run_raw_scores": {
+      "ok": false,
+      "rows": 0,
+      "required_rows": 30,
+      "note": "Actual observations were absent from the supplied source folder; do not synthesize them."
+    }
+  }
+}

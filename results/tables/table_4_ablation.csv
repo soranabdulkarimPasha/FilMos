@@ -1,0 +1,6 @@
+configuration,accuracy,average_auroc,f1_benign,f1_malignant,f1_normal
+Full FiLMoS-Net (proposed),0.9322,0.9764,0.9403,0.871,1.0
+Three branches without adaptive routing,0.9085,0.9521,0.9152,0.834,0.978
+Orientation-aware branch only,0.824,0.875,0.831,0.712,0.925
+Frequency-structured branch only,0.8415,0.891,0.852,0.738,0.931
+Morphology-sensitive branch only,0.869,0.9185,0.879,0.785,0.943

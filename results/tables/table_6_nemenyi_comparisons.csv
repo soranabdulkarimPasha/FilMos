@@ -1,0 +1,6 @@
+baseline,accuracy_rank_gap,accuracy_p,accuracy_decision,macro_f1_rank_gap,macro_f1_p,macro_f1_decision
+Hybrid CNN-LSTM,1.2,0.9134,Not significant,1.8,0.6505,Not significant
+ViT Ensemble,1.8,0.6505,Not significant,1.2,0.9134,Not significant
+DSDNet,3.0,0.1139,Not significant,3.0,0.1139,Not significant
+CTMF-Net,4.0,0.0094,Significant,4.0,0.0094,Significant
+SAE-Net,5.0,0.000343,Significant,5.0,0.000343,Significant

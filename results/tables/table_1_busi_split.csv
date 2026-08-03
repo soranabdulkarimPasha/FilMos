@@ -1,0 +1,5 @@
+class,total,train,validation,test
+Benign,437,305,66,66
+Malignant,210,146,32,32
+Normal,133,93,20,20
+Total,780,544,118,118

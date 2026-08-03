@@ -1,0 +1,27 @@
+{
+  "data_root": "data/Dataset_BUSI_with_GT",
+  "manifest": "data/busi_split_seed42.csv",
+  "manifest_rows": 780,
+  "duplicate_manifest_paths": 0,
+  "manifest_counts": {
+    "test/benign": 66,
+    "test/malignant": 32,
+    "test/normal": 20,
+    "train/benign": 305,
+    "train/malignant": 146,
+    "train/normal": 93,
+    "validation/benign": 66,
+    "validation/malignant": 32,
+    "validation/normal": 20
+  },
+  "diagnostic_image_counts": {
+    "benign": 437,
+    "malignant": 210,
+    "normal": 133
+  },
+  "missing_class_directories": [],
+  "missing_images": [],
+  "images_without_lesion_annotation": [],
+  "manifest_ok": true,
+  "dataset_ok": true
+}

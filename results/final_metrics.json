@@ -1,0 +1,195 @@
+{
+  "protocol": {
+    "model": "FiLMoS-Net",
+    "architecture_changed": false,
+    "trainable_parameters": 1288966,
+    "checkpoint": "checkpoints/filmos_net_primary_seed42.pt",
+    "checkpoint_epoch": 13,
+    "seed": 42,
+    "input_size": [
+      128,
+      128
+    ],
+    "batch_size": 32,
+    "mask_assisted_channels": [
+      "original grayscale context",
+      "binary lesion mask",
+      "lesion-only grayscale texture"
+    ],
+    "weighted_sampler": false,
+    "class_weight_power": 0.65,
+    "focal_gamma": 0.0,
+    "mixup": false,
+    "tta": [
+      "original",
+      "horizontal flip",
+      "vertical flip",
+      "normalized-intensity x1.03",
+      "normalized-intensity x0.97"
+    ],
+    "calibration": "one additive class-logit bias selected on validation macro-F1 only",
+    "validation_bias": [
+      0.0,
+      1.7000000476837158,
+      -2.0
+    ]
+  },
+  "dataset": {
+    "independent_images": 780,
+    "input_class_counts": {
+      "benign": 437,
+      "malignant": 210,
+      "normal": 133
+    },
+    "split_counts": {
+      "train": {
+        "benign": 305,
+        "malignant": 146,
+        "normal": 93
+      },
+      "validation": {
+        "benign": 66,
+        "malignant": 32,
+        "normal": 20
+      },
+      "test": {
+        "benign": 66,
+        "malignant": 32,
+        "normal": 20
+      }
+    }
+  },
+  "validation": {
+    "loss": null,
+    "cm": [
+      [
+        66,
+        0,
+        0
+      ],
+      [
+        3,
+        29,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "auc_ovr_macro": 0.9917807886557887,
+    "logit_bias": [
+      0.0,
+      1.7000000476837158,
+      -2.0
+    ],
+    "accuracy": 0.9745762711864324,
+    "macro_f1": 0.9761991499696258,
+    "macro_recall": 0.9687499999999689,
+    "macro_specificity": 0.9807692307692175,
+    "min_recall": 0.9062499999999716,
+    "min_f1": 0.9508196721311319,
+    "per_class": [
+      {
+        "recall_sens": 0.9999999999999849,
+        "specificity": 0.9423076923076742,
+        "precision": 0.956521739130421,
+        "f1": 0.9777777777777705,
+        "support": 66
+      },
+      {
+        "recall_sens": 0.9062499999999716,
+        "specificity": 0.9999999999999885,
+        "precision": 0.9999999999999656,
+        "f1": 0.9508196721311319,
+        "support": 32
+      },
+      {
+        "recall_sens": 0.99999999999995,
+        "specificity": 0.9999999999999899,
+        "precision": 0.99999999999995,
+        "f1": 0.9999999999999749,
+        "support": 20
+      }
+    ]
+  },
+  "test": {
+    "accuracy": 0.9322033898305084,
+    "macro_f1": 0.9370887497993902,
+    "micro_f1": 0.9322033898305084,
+    "macro_auroc_ovr": 0.9763844843786704,
+    "macro_average_precision": 0.9697996783706134,
+    "cohen_kappa": 0.8831104507181773,
+    "macro_sensitivity": 0.9327651515151515,
+    "macro_specificity": 0.9563208109719609,
+    "confusion_matrix": [
+      [
+        63,
+        3,
+        0
+      ],
+      [
+        5,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.9264705882352942,
+        "sensitivity_recall": 0.9545454545454546,
+        "specificity": 0.9038461538461364,
+        "f1": 0.9402985074626866,
+        "auroc_ovr": 0.9734848484848484,
+        "average_precision": 0.9727342455379017
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.9,
+        "sensitivity_recall": 0.84375,
+        "specificity": 0.9651162790697563,
+        "f1": 0.8709677419354839,
+        "auroc_ovr": 0.9556686046511628,
+        "average_precision": 0.936664789573938
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 0.9999999999999899,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    },
+    "stratified_bootstrap_95_ci": {
+      "accuracy": {
+        "lower_95": 0.8813559322033898,
+        "upper_95": 0.9745762711864406
+      },
+      "macro_f1": {
+        "lower_95": 0.8916985345476037,
+        "upper_95": 0.9766081871345028
+      },
+      "micro_f1": {
+        "lower_95": 0.8813559322033898,
+        "upper_95": 0.9745762711864406
+      },
+      "macro_auroc_ovr": {
+        "lower_95": 0.9461967689529462,
+        "upper_95": 0.9967022641441247
+      },
+      "macro_average_precision": {
+        "lower_95": 0.9365045692738581,
+        "upper_95": 0.9943403147981235
+      }
+    }
+  }
+}
