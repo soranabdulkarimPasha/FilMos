@@ -124,12 +124,6 @@ The cold-start validation-selected epoch-6 checkpoint reached test accuracy 0.92
 
 ## Regenerate manuscript artifacts
 
-Tables 1–6:
-
-```bash
-python export_manuscript_tables.py
-```
-
 Numerical confusion-matrix and ROC/PR coordinates:
 
 ```bash
