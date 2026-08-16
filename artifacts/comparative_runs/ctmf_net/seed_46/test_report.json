@@ -1,0 +1,144 @@
+{
+  "model_key": "ctmf_net",
+  "display_name": "CTMF-Net",
+  "implementation_scope": "Three-class 128x128 adaptation of Wang et al.: four VGG-like CNN stages with CBAM, four three-block ViT stages, and two-pass cross-attention FIMs. The output head and input channels are adapted to the shared BUSI protocol.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 46,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 11,
+    "device": "cuda",
+    "trainable_parameters": 2612143,
+    "training_seconds": 822.2188417549987,
+    "validation_bias": [
+      0.0,
+      -0.19999997317790985,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/ctmf_net/seed_46/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.8898305084745762,
+    "cohen_kappa": 0.8108508014796547,
+    "macro_f1": 0.8986354775828459,
+    "macro_sensitivity": 0.8967803030303031,
+    "macro_specificity": 0.9318723911747168,
+    "macro_auroc_ovr": 0.9414863640881083,
+    "macro_average_precision": 0.920417006285606,
+    "confusion_matrix": [
+      [
+        60,
+        6,
+        0
+      ],
+      [
+        7,
+        25,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.8955223880597015,
+        "sensitivity_recall": 0.9090909090909091,
+        "specificity": 0.8653846153846154,
+        "f1": 0.9022556390977443,
+        "auroc_ovr": 0.9236596736596736,
+        "average_precision": 0.9178822080654577
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.8064516129032258,
+        "sensitivity_recall": 0.78125,
+        "specificity": 0.9302325581395349,
+        "f1": 0.7936507936507936,
+        "auroc_ovr": 0.9007994186046511,
+        "average_precision": 0.8433688107913603
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.8559322033898306,
+    "cohen_kappa": 0.7526510480887793,
+    "macro_f1": 0.8674463937621831,
+    "macro_sensitivity": 0.8658459595959597,
+    "macro_specificity": 0.9112999403697079,
+    "macro_auroc_ovr": 0.9420428570137872,
+    "macro_average_precision": 0.9191086509573569,
+    "confusion_matrix": [
+      [
+        58,
+        8,
+        0
+      ],
+      [
+        9,
+        23,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.8656716417910447,
+        "sensitivity_recall": 0.8787878787878788,
+        "specificity": 0.8269230769230769,
+        "f1": 0.8721804511278195,
+        "auroc_ovr": 0.9227855477855478,
+        "average_precision": 0.9267600995043956
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.7419354838709677,
+        "sensitivity_recall": 0.71875,
+        "specificity": 0.9069767441860465,
+        "f1": 0.7301587301587301,
+        "auroc_ovr": 0.903343023255814,
+        "average_precision": 0.8305658533676747
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "ctmf_net_seed46_test_predictions.csv",
+  "json_report_file": "ctmf_net_seed46_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/ctmf_net/seed_46/training_history.json"
+}

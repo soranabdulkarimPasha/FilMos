@@ -1,0 +1,144 @@
+{
+  "model_key": "ctmf_net",
+  "display_name": "CTMF-Net",
+  "implementation_scope": "Three-class 128x128 adaptation of Wang et al.: four VGG-like CNN stages with CBAM, four three-block ViT stages, and two-pass cross-attention FIMs. The output head and input channels are adapted to the shared BUSI protocol.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 45,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 18,
+    "device": "cuda",
+    "trainable_parameters": 2612143,
+    "training_seconds": 1154.1577127550008,
+    "validation_bias": [
+      0.0,
+      1.5,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/ctmf_net/seed_45/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.8813559322033898,
+    "cohen_kappa": 0.8004830917874396,
+    "macro_f1": 0.8949142156862745,
+    "macro_sensitivity": 0.9024621212121212,
+    "macro_specificity": 0.9330649970184854,
+    "macro_auroc_ovr": 0.9394478664100757,
+    "macro_average_precision": 0.9183711006585366,
+    "confusion_matrix": [
+      [
+        57,
+        9,
+        0
+      ],
+      [
+        5,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.9193548387096774,
+        "sensitivity_recall": 0.8636363636363636,
+        "specificity": 0.9038461538461539,
+        "f1": 0.890625,
+        "auroc_ovr": 0.918997668997669,
+        "average_precision": 0.904869165542281
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.75,
+        "sensitivity_recall": 0.84375,
+        "specificity": 0.8953488372093024,
+        "f1": 0.7941176470588235,
+        "auroc_ovr": 0.8993459302325582,
+        "average_precision": 0.8502441364333286
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.8389830508474576,
+    "cohen_kappa": 0.728110599078341,
+    "macro_f1": 0.8563770295807783,
+    "macro_sensitivity": 0.8611111111111112,
+    "macro_specificity": 0.90608228980322,
+    "macro_auroc_ovr": 0.9333106331652843,
+    "macro_average_precision": 0.8928052935380176,
+    "confusion_matrix": [
+      [
+        55,
+        11,
+        0
+      ],
+      [
+        8,
+        24,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.873015873015873,
+        "sensitivity_recall": 0.8333333333333334,
+        "specificity": 0.8461538461538461,
+        "f1": 0.8527131782945736,
+        "auroc_ovr": 0.9082167832167832,
+        "average_precision": 0.9144192622695767
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.6857142857142857,
+        "sensitivity_recall": 0.75,
+        "specificity": 0.872093023255814,
+        "f1": 0.7164179104477612,
+        "auroc_ovr": 0.8917151162790697,
+        "average_precision": 0.7639966183444761
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "ctmf_net_seed45_test_predictions.csv",
+  "json_report_file": "ctmf_net_seed45_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/ctmf_net/seed_45/training_history.json"
+}
