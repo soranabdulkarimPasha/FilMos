@@ -1,0 +1,144 @@
+{
+  "model_key": "sae_net",
+  "display_name": "SAE-Net (image-spectrum adaptation)",
+  "implementation_scope": "Non-equivalent image-only adaptation of Xie et al. The grayscale DenseNet-like branch and 128-bin cumulative tissue-probability pooling are retained, but radial B-mode FFT statistics replace the unavailable raw-RF bump-wavelet spectra. Results must not be described as an exact SAE-Net reproduction.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 46,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 23,
+    "device": "cuda",
+    "trainable_parameters": 317302,
+    "training_seconds": 378.67488736400264,
+    "validation_bias": [
+      0.0,
+      -1.7999999523162842,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/sae_net/seed_46/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.9491525423728814,
+    "cohen_kappa": 0.9115884115884116,
+    "macro_f1": 0.9519607843137255,
+    "macro_sensitivity": 0.9428661616161617,
+    "macro_specificity": 0.9640727489564699,
+    "macro_auroc_ovr": 0.971601355685658,
+    "macro_average_precision": 0.9616543621833543,
+    "confusion_matrix": [
+      [
+        65,
+        1,
+        0
+      ],
+      [
+        5,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.9285714285714286,
+        "sensitivity_recall": 0.9848484848484849,
+        "specificity": 0.9038461538461539,
+        "f1": 0.9558823529411765,
+        "auroc_ovr": 0.9594988344988344,
+        "average_precision": 0.9558112818591551
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.9642857142857143,
+        "sensitivity_recall": 0.84375,
+        "specificity": 0.9883720930232558,
+        "f1": 0.9,
+        "auroc_ovr": 0.9553052325581395,
+        "average_precision": 0.9291518046909076
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.9322033898305084,
+    "cohen_kappa": 0.8831104507181773,
+    "macro_f1": 0.9370887497993902,
+    "macro_sensitivity": 0.9327651515151515,
+    "macro_specificity": 0.9563208109719739,
+    "macro_auroc_ovr": 0.9757732174156594,
+    "macro_average_precision": 0.9572700786754149,
+    "confusion_matrix": [
+      [
+        63,
+        3,
+        0
+      ],
+      [
+        5,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.9264705882352942,
+        "sensitivity_recall": 0.9545454545454546,
+        "specificity": 0.9038461538461539,
+        "f1": 0.9402985074626866,
+        "auroc_ovr": 0.9662004662004663,
+        "average_precision": 0.973501059628693
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.9,
+        "sensitivity_recall": 0.84375,
+        "specificity": 0.9651162790697675,
+        "f1": 0.8709677419354839,
+        "auroc_ovr": 0.9611191860465116,
+        "average_precision": 0.8983091763975516
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "sae_net_seed46_test_predictions.csv",
+  "json_report_file": "sae_net_seed46_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/sae_net/seed_46/training_history.json"
+}
