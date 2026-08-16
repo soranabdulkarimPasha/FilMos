@@ -111,4 +111,4 @@ The numerical pipeline rejects missing runs, duplicate samples, inconsistent tes
 
 ## Availability
 
-The manuscript points to <https://github.com/soranabdulkarimPasha/FilMos>. Before public release, the authors should add the institutionally approved license; no license is inferred by this package.
+The manuscript points to <https://github.com/soranabdulkarimPasha/FilMos>. 
