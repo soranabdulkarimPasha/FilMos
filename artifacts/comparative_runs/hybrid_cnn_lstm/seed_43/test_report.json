@@ -1,0 +1,144 @@
+{
+  "model_key": "hybrid_cnn_lstm",
+  "display_name": "Hybrid CNN-LSTM",
+  "implementation_scope": "Four-scale CNN feature extractor followed by a two-layer bidirectional LSTM and learned attention pooling over the spatial feature sequence; three-class output.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 43,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 16,
+    "device": "cuda",
+    "trainable_parameters": 664484,
+    "training_seconds": 409.3817222450016,
+    "validation_bias": [
+      0.0,
+      0.699999988079071,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_43/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.9661016949152542,
+    "cohen_kappa": 0.9420432220039293,
+    "macro_f1": 0.9690656565656566,
+    "macro_sensitivity": 0.9690656565656566,
+    "macro_specificity": 0.9794275491949911,
+    "macro_auroc_ovr": 0.983173076923077,
+    "macro_average_precision": 0.9796219462262128,
+    "confusion_matrix": [
+      [
+        64,
+        2,
+        0
+      ],
+      [
+        2,
+        30,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.9696969696969697,
+        "sensitivity_recall": 0.9696969696969697,
+        "specificity": 0.9615384615384616,
+        "f1": 0.9696969696969697,
+        "auroc_ovr": 0.9807692307692307,
+        "average_precision": 0.9783116975439909
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.9375,
+        "sensitivity_recall": 0.9375,
+        "specificity": 0.9767441860465116,
+        "f1": 0.9375,
+        "auroc_ovr": 0.96875,
+        "average_precision": 0.9605541411346475
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.8728813559322034,
+    "cohen_kappa": 0.7835656639765224,
+    "macro_f1": 0.8849089841456254,
+    "macro_sensitivity": 0.8866792929292929,
+    "macro_specificity": 0.9241204531902206,
+    "macro_auroc_ovr": 0.9709466083012596,
+    "macro_average_precision": 0.9561609766044858,
+    "confusion_matrix": [
+      [
+        58,
+        8,
+        0
+      ],
+      [
+        7,
+        25,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.8923076923076924,
+        "sensitivity_recall": 0.8787878787878788,
+        "specificity": 0.8653846153846154,
+        "f1": 0.8854961832061069,
+        "auroc_ovr": 0.9586247086247087,
+        "average_precision": 0.9697337120787424
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.7575757575757576,
+        "sensitivity_recall": 0.78125,
+        "specificity": 0.9069767441860465,
+        "f1": 0.7692307692307693,
+        "auroc_ovr": 0.9542151162790697,
+        "average_precision": 0.8987492177347146
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "hybrid_cnn_lstm_seed43_test_predictions.csv",
+  "json_report_file": "hybrid_cnn_lstm_seed43_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_43/training_history.json"
+}
