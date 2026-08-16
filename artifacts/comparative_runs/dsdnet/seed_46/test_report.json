@@ -1,0 +1,144 @@
+{
+  "model_key": "dsdnet",
+  "display_name": "DSDNet (same-mask adaptation)",
+  "implementation_scope": "Three-class adaptation preserving four DSMA, SPGF and MILT stages. For information parity with mask-assisted FiLMoS-Net, the supplied BUSI union mask is the frozen spatial prior; this replaces the paper's externally pretrained BUSBRA segmentation network. The four guided scales begin at 16x16 for the shared 128x128 input. This must be reported as a same-protocol adaptation.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 46,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 11,
+    "device": "cuda",
+    "trainable_parameters": 2521205,
+    "training_seconds": 495.6836756459961,
+    "validation_bias": [
+      0.0,
+      -0.09999997168779373,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/dsdnet/seed_46/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.8983050847457628,
+    "cohen_kappa": 0.8275694106186069,
+    "macro_f1": 0.9086247086247087,
+    "macro_sensitivity": 0.9125631313131314,
+    "macro_specificity": 0.9408169350029816,
+    "macro_auroc_ovr": 0.946941462929835,
+    "macro_average_precision": 0.9083793414888875,
+    "confusion_matrix": [
+      [
+        59,
+        7,
+        0
+      ],
+      [
+        5,
+        27,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.921875,
+        "sensitivity_recall": 0.8939393939393939,
+        "specificity": 0.9038461538461539,
+        "f1": 0.9076923076923077,
+        "auroc_ovr": 0.9294871794871794,
+        "average_precision": 0.9275423383213948
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.7941176470588235,
+        "sensitivity_recall": 0.84375,
+        "specificity": 0.9186046511627907,
+        "f1": 0.8181818181818182,
+        "auroc_ovr": 0.9113372093023255,
+        "average_precision": 0.7975956861452681
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.8389830508474576,
+    "cohen_kappa": 0.7212136284506342,
+    "macro_f1": 0.8492612831410646,
+    "macro_sensitivity": 0.8450126262626263,
+    "macro_specificity": 0.8984794275491949,
+    "macro_auroc_ovr": 0.9368768747402468,
+    "macro_average_precision": 0.8996400570118647,
+    "confusion_matrix": [
+      [
+        58,
+        8,
+        0
+      ],
+      [
+        11,
+        21,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.8405797101449275,
+        "sensitivity_recall": 0.8787878787878788,
+        "specificity": 0.7884615384615384,
+        "f1": 0.8592592592592593,
+        "auroc_ovr": 0.9149184149184149,
+        "average_precision": 0.9248762490166502
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.7241379310344828,
+        "sensitivity_recall": 0.65625,
+        "specificity": 0.9069767441860465,
+        "f1": 0.6885245901639344,
+        "auroc_ovr": 0.8957122093023256,
+        "average_precision": 0.7740439220189432
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "dsdnet_seed46_test_predictions.csv",
+  "json_report_file": "dsdnet_seed46_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/dsdnet/seed_46/training_history.json"
+}
