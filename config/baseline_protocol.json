@@ -1,0 +1,41 @@
+{
+  "scope": "five independently initialized, validation-selected cold-start runs per model",
+  "fixed_partition_seed": 42,
+  "training_seeds": [42, 43, 44, 45, 46],
+  "pretrained_weights": false,
+  "data": {
+    "manifest": "data/busi_split_seed42.csv",
+    "independent_images": 780,
+    "split": [544, 118, 118],
+    "input_channels": [
+      "original grayscale context",
+      "union binary lesion annotation",
+      "lesion-only grayscale texture"
+    ],
+    "image_size": [128, 128]
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "initial_learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "schedule": "cosine annealing",
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "maximum_epochs": 24,
+    "early_stopping_patience": 6,
+    "checkpoint_criterion": "maximum validation macro-F1",
+    "loss": "class-weighted cross-entropy",
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "gradient_clip_l2": 1.0,
+    "automatic_mixed_precision": true
+  },
+  "hyperparameter_selection": "Architecture-specific dimensions were fixed before test evaluation; checkpoint epoch and additive class-logit bias were selected using validation macro-F1 only. Test labels were not used for training, checkpoint selection, calibration, or hyperparameter selection.",
+  "models": {
+    "Hybrid CNN-LSTM": {"reference": 21, "parameters": 664484, "seed_42_selected_epoch": 10},
+    "ViT": {"reference": 22, "parameters": 1297155, "seed_42_selected_epoch": 17, "note": "standalone model, not a multi-checkpoint ensemble"},
+    "DSDNet same-mask adaptation": {"reference": 13, "parameters": 2521205, "seed_42_selected_epoch": 18},
+    "CTMF-Net": {"reference": 23, "parameters": 2612143, "seed_42_selected_epoch": 19},
+    "SAE-Net image-spectrum adaptation": {"reference": 24, "parameters": 317302, "seed_42_selected_epoch": 14}
+  }
+}

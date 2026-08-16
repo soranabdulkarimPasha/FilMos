@@ -1,0 +1,68 @@
+{
+  "model": "FiLMoS-Net",
+  "task": "three-class BUSI classification",
+  "classes": ["benign", "malignant", "normal"],
+  "seed": 42,
+  "split": {"train": 0.70, "validation": 0.15, "test": 0.15},
+  "input": {
+    "size": [128, 128],
+    "channels": [
+      "original grayscale context",
+      "binary lesion geometry",
+      "lesion-only grayscale texture"
+    ],
+    "normalization_mean": [0.485, 0.456, 0.406],
+    "normalization_std": [0.229, 0.224, 0.225]
+  },
+  "augmentation": {
+    "training_only": true,
+    "resize": "bilinear 128x128",
+    "horizontal_flip_probability": 0.5,
+    "rotation_degrees": 5,
+    "translation_fraction": [0.02, 0.02],
+    "scale_range": [0.98, 1.02],
+    "color_jitter": false
+  },
+  "architecture": {
+    "base_channels": 64,
+    "gabor_filters": 32,
+    "gabor_kernel": [21, 21],
+    "dct_filters": 64,
+    "dct_block": [8, 8],
+    "edge_filters": 5,
+    "morphology_beta": 10.0,
+    "router": [192, 128, 3],
+    "router_dropout": 0.1,
+    "trainable_parameters": 1288966
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "initial_learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "maximum_epochs": 24,
+    "early_stopping_patience": 6,
+    "selection_metric": "validation macro-F1",
+    "class_weight_power": 0.65,
+    "class_weights": [0.6278, 1.0135, 1.3587],
+    "label_smoothing": 0.02,
+    "weighted_sampling": false,
+    "focal_gamma": 0.0,
+    "mixup": false,
+    "gradient_clip_l2": 1.0,
+    "automatic_mixed_precision": true
+  },
+  "inference": {
+    "tta": [
+      "original",
+      "horizontal flip",
+      "vertical flip",
+      "normalized intensity x1.03",
+      "normalized intensity x0.97"
+    ],
+    "validation_selected_logit_bias": [0.0, 1.7, -2.0],
+    "bootstrap_resamples": 5000,
+    "bootstrap_seed": 2026
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "accuracy": {
+    "friedman_chi_square": 22.5287356321839,
+    "friedman_p": 0.0004152734929274589,
+    "kendalls_w": 0.901149425287356,
+    "nemenyi_critical_difference": 3.372165476366781,
+    "summary": [
+      {
+        "model": "FiLMoS-Net (cold start)",
+        "mean": 0.9372881355932204,
+        "sample_sd": 0.015394832308970305,
+        "ci_low": 0.9181729265567878,
+        "ci_high": 0.956403344629653,
+        "mean_rank": 1.0
+      },
+      {
+        "model": "Hybrid CNN-LSTM",
+        "mean": 0.8694915254237289,
+        "sample_sd": 0.017573255384176024,
+        "ci_low": 0.8476714468819571,
+        "ci_high": 0.8913116039655007,
+        "mean_rank": 3.7
+      },
+      {
+        "model": "ViT",
+        "mean": 0.8220338983050848,
+        "sample_sd": 0.021606014888105016,
+        "ci_low": 0.7952064874738702,
+        "ci_high": 0.8488613091362993,
+        "mean_rank": 6.0
+      },
+      {
+        "model": "DSDNet (same-mask adaptation)",
+        "mean": 0.864406779661017,
+        "sample_sd": 0.02160601488810504,
+        "ci_low": 0.8375793688298023,
+        "ci_high": 0.8912341904922316,
+        "mean_rank": 4.0
+      },
+      {
+        "model": "CTMF-Net",
+        "mean": 0.8627118644067797,
+        "sample_sd": 0.01932500720507012,
+        "ci_low": 0.8387166986952157,
+        "ci_high": 0.8867070301183437,
+        "mean_rank": 4.3
+      },
+      {
+        "model": "SAE-Net (image-spectrum adaptation)",
+        "mean": 0.9135593220338982,
+        "sample_sd": 0.01630117293361978,
+        "ci_low": 0.8933187424737289,
+        "ci_high": 0.9337999015940676,
+        "mean_rank": 2.0
+      }
+    ],
+    "comparisons_with_filmos_net": [
+      {
+        "baseline": "Hybrid CNN-LSTM",
+        "rank_gap": 2.7,
+        "p_value": 0.20136306659540937,
+        "decision_at_0.05": "Not significant"
+      },
+      {
+        "baseline": "ViT",
+        "rank_gap": 5.0,
+        "p_value": 0.00034275609268519247,
+        "decision_at_0.05": "Significant"
+      },
+      {
+        "baseline": "DSDNet (same-mask adaptation)",
+        "rank_gap": 3.0,
+        "p_value": 0.11389055397421644,
+        "decision_at_0.05": "Not significant"
+      },
+      {
+        "baseline": "CTMF-Net",
+        "rank_gap": 3.3,
+        "p_value": 0.05919457901149705,
+        "decision_at_0.05": "Not significant"
+      },
+      {
+        "baseline": "SAE-Net (image-spectrum adaptation)",
+        "rank_gap": 1.0,
+        "p_value": 0.9589973903152619,
+        "decision_at_0.05": "Not significant"
+      }
+    ]
+  },
+  "macro_f1": {
+    "friedman_chi_square": 22.942857142857136,
+    "friedman_p": 0.0003461633447452606,
+    "kendalls_w": 0.9177142857142855,
+    "nemenyi_critical_difference": 3.372165476366781,
+    "summary": [
+      {
+        "model": "FiLMoS-Net (cold start)",
+        "mean": 0.9418344391740339,
+        "sample_sd": 0.015396993494385745,
+        "ci_low": 0.9227165466714775,
+        "ci_high": 0.9609523316765902,
+        "mean_rank": 1.0
+      },
+      {
+        "model": "Hybrid CNN-LSTM",
+        "mean": 0.8806361326313141,
+        "sample_sd": 0.016272756737327358,
+        "ci_low": 0.8604308364390469,
+        "ci_high": 0.9008414288235813,
+        "mean_rank": 3.4
+      },
+      {
+        "model": "ViT",
+        "mean": 0.8222921087200392,
+        "sample_sd": 0.026111104784676667,
+        "ci_low": 0.7898708899555801,
+        "ci_high": 0.8547133274844984,
+        "mean_rank": 6.0
+      },
+      {
+        "model": "DSDNet (same-mask adaptation)",
+        "mean": 0.8721232165705499,
+        "sample_sd": 0.020541940183342888,
+        "ci_low": 0.8466170289916378,
+        "ci_high": 0.897629404149462,
+        "mean_rank": 4.2
+      },
+      {
+        "model": "CTMF-Net",
+        "mean": 0.87048976609323,
+        "sample_sd": 0.013555739819675946,
+        "ci_low": 0.8536580919901212,
+        "ci_high": 0.8873214401963389,
+        "mean_rank": 4.4
+      },
+      {
+        "model": "SAE-Net (image-spectrum adaptation)",
+        "mean": 0.9202517835867396,
+        "sample_sd": 0.014429301199091827,
+        "ci_low": 0.9023354397685889,
+        "ci_high": 0.9381681274048904,
+        "mean_rank": 2.0
+      }
+    ],
+    "comparisons_with_filmos_net": [
+      {
+        "baseline": "Hybrid CNN-LSTM",
+        "rank_gap": 2.4,
+        "p_value": 0.3260395134037003,
+        "decision_at_0.05": "Not significant"
+      },
+      {
+        "baseline": "ViT",
+        "rank_gap": 5.0,
+        "p_value": 0.00034275609268519247,
+        "decision_at_0.05": "Significant"
+      },
+      {
+        "baseline": "DSDNet (same-mask adaptation)",
+        "rank_gap": 3.2,
+        "p_value": 0.07430211590164015,
+        "decision_at_0.05": "Not significant"
+      },
+      {
+        "baseline": "CTMF-Net",
+        "rank_gap": 3.4000000000000004,
+        "p_value": 0.04673625440062168,
+        "decision_at_0.05": "Significant"
+      },
+      {
+        "baseline": "SAE-Net (image-spectrum adaptation)",
+        "rank_gap": 1.0,
+        "p_value": 0.9589973903152619,
+        "decision_at_0.05": "Not significant"
+      }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "technical_checks_ok": true,
+  "release_ready": true,
+  "checks": {
+    "fixed_split": {
+      "ok": true,
+      "rows": 780
+    },
+    "comparative_predictions": {
+      "ok": true,
+      "expected_files": 30,
+      "files": {
+        "filmos_cold_seed42": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/filmos_net/seed_42/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9180471775891624,
+          "classwise_f1_mean": 0.9180471775891624
+        },
+        "filmos_cold_seed43": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/filmos_net/seed_43/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.939083139083139,
+          "classwise_f1_mean": 0.939083139083139
+        },
+        "filmos_cold_seed44": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/filmos_net/seed_44/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.94541910331384,
+          "classwise_f1_mean": 0.94541910331384
+        },
+        "filmos_cold_seed45": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/filmos_net/seed_45/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9603319166160696,
+          "classwise_f1_mean": 0.9603319166160696
+        },
+        "filmos_cold_seed46": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/filmos_net/seed_46/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9462908592679585,
+          "classwise_f1_mean": 0.9462908592679585
+        },
+        "hybrid_cnn_lstm_seed42": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_42/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8933954933954934,
+          "classwise_f1_mean": 0.8933954933954934
+        },
+        "hybrid_cnn_lstm_seed43": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_43/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8849089841456254,
+          "classwise_f1_mean": 0.8849089841456254
+        },
+        "hybrid_cnn_lstm_seed44": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_44/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8968629832017809,
+          "classwise_f1_mean": 0.8968629832017809
+        },
+        "hybrid_cnn_lstm_seed45": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_45/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8584496870486279,
+          "classwise_f1_mean": 0.8584496870486279
+        },
+        "hybrid_cnn_lstm_seed46": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/hybrid_cnn_lstm/seed_46/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8695635153650421,
+          "classwise_f1_mean": 0.8695635153650421
+        },
+        "vit_seed42": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/vit/seed_42/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8017328583366319,
+          "classwise_f1_mean": 0.8017328583366319
+        },
+        "vit_seed43": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/vit/seed_43/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8530734632683658,
+          "classwise_f1_mean": 0.8530734632683658
+        },
+        "vit_seed44": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/vit/seed_44/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8464266567693514,
+          "classwise_f1_mean": 0.8464266567693514
+        },
+        "vit_seed45": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/vit/seed_45/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.7955138236828377,
+          "classwise_f1_mean": 0.7955138236828377
+        },
+        "vit_seed46": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/vit/seed_46/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8147137415430098,
+          "classwise_f1_mean": 0.8147137415430098
+        },
+        "dsdnet_seed42": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/dsdnet/seed_42/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.902048975512244,
+          "classwise_f1_mean": 0.902048975512244
+        },
+        "dsdnet_seed43": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/dsdnet/seed_43/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8762626262626263,
+          "classwise_f1_mean": 0.8762626262626263
+        },
+        "dsdnet_seed44": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/dsdnet/seed_44/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8762626262626263,
+          "classwise_f1_mean": 0.8762626262626263
+        },
+        "dsdnet_seed45": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/dsdnet/seed_45/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8567805716741886,
+          "classwise_f1_mean": 0.8567805716741886
+        },
+        "dsdnet_seed46": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/dsdnet/seed_46/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8492612831410646,
+          "classwise_f1_mean": 0.8492612831410646
+        },
+        "ctmf_net_seed42": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/ctmf_net/seed_42/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8706953423934557,
+          "classwise_f1_mean": 0.8706953423934557
+        },
+        "ctmf_net_seed43": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/ctmf_net/seed_43/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.892801548235096,
+          "classwise_f1_mean": 0.892801548235096
+        },
+        "ctmf_net_seed44": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/ctmf_net/seed_44/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8651285164946367,
+          "classwise_f1_mean": 0.8651285164946367
+        },
+        "ctmf_net_seed45": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/ctmf_net/seed_45/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8563770295807783,
+          "classwise_f1_mean": 0.8563770295807783
+        },
+        "ctmf_net_seed46": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/ctmf_net/seed_46/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8674463937621831,
+          "classwise_f1_mean": 0.8674463937621831
+        },
+        "sae_net_seed42": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/sae_net/seed_42/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9127302165553531,
+          "classwise_f1_mean": 0.9127302165553531
+        },
+        "sae_net_seed43": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/sae_net/seed_43/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9213609372492377,
+          "classwise_f1_mean": 0.9213609372492377
+        },
+        "sae_net_seed44": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/sae_net/seed_44/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9298245614035087,
+          "classwise_f1_mean": 0.9298245614035087
+        },
+        "sae_net_seed45": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/sae_net/seed_45/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9002544529262085,
+          "classwise_f1_mean": 0.9002544529262085
+        },
+        "sae_net_seed46": {
+          "ok": true,
+          "path": "artifacts/comparative_runs/sae_net/seed_46/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.9370887497993902,
+          "classwise_f1_mean": 0.9370887497993902
+        }
+      }
+    },
+    "ablation_predictions": {
+      "ok": true,
+      "design": "post-training routing intervention on one shared seed-42 checkpoint",
+      "files": {
+        "fixed": {
+          "ok": true,
+          "path": "artifacts/routing_interventions/fixed/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8693986340163251,
+          "classwise_f1_mean": 0.8693986340163251
+        },
+        "orientation": {
+          "ok": true,
+          "path": "artifacts/routing_interventions/orientation/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.3875555555555555,
+          "classwise_f1_mean": 0.3875555555555555
+        },
+        "frequency": {
+          "ok": true,
+          "path": "artifacts/routing_interventions/frequency/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.8425044091710759,
+          "classwise_f1_mean": 0.8425044091710759
+        },
+        "morphology": {
+          "ok": true,
+          "path": "artifacts/routing_interventions/morphology/test_predictions.csv",
+          "rows": 118,
+          "unique_test_ids": 118,
+          "macro_f1": 0.5594896331738437,
+          "classwise_f1_mean": 0.5594896331738437
+        }
+      }
+    },
+    "run_level_scores": {
+      "ok": true,
+      "rows": 30,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "generated_results": {
+      "ok": true,
+      "pipeline_audit_complete": true,
+      "required_outputs": [
+        "table_1_dataset_split.csv",
+        "table_2_single_checkpoints.csv",
+        "table_3_primary_classwise.csv",
+        "table_4_ablation.csv",
+        "table_5_five_run_summary.csv",
+        "table_6_paired_statistics.json",
+        "primary_seed42_bootstrap.json",
+        "run_level_metrics.csv",
+        "all_metrics.json",
+        "protocol_verification_checks.csv"
+      ]
+    }
+  }
+}

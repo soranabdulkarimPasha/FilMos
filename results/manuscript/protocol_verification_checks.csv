@@ -1,0 +1,3 @@
+analysis,source,accuracy,macro_f1,macro_auroc
+Warm-start verification,same-partition FiLMoS initialization; lr=2e-4,0.9322033898305084,0.9370887497993902,0.9763844843786704
+Independent cold-start verification,cold start; lr=7e-4,0.923728813559322,0.9328996918863403,0.9839946874830595

@@ -1,0 +1,11 @@
+{
+  "fixed_partition_seed": 42,
+  "primary_checkpoint_training_seed": 42,
+  "bootstrap_seed": 2026,
+  "deterministic_cudnn": true,
+  "cudnn_benchmark": false,
+  "comparative_training_seeds": [42, 43, 44, 45, 46],
+  "comparative_run_scope": "five independently initialized, validation-selected cold-start checkpoints per architecture",
+  "paired_block": "training seed; the image partition remains fixed at split seed 42",
+  "warm_start_scope": "secondary protocol sensitivity analysis only; excluded from comparative tables"
+}
