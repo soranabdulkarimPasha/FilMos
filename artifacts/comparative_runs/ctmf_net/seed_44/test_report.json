@@ -1,0 +1,144 @@
+{
+  "model_key": "ctmf_net",
+  "display_name": "CTMF-Net",
+  "implementation_scope": "Three-class 128x128 adaptation of Wang et al.: four VGG-like CNN stages with CBAM, four three-block ViT stages, and two-pass cross-attention FIMs. The output head and input channels are adapted to the shared BUSI protocol.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 44,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 23,
+    "device": "cuda",
+    "trainable_parameters": 2612143,
+    "training_seconds": 1154.8951085049994,
+    "validation_bias": [
+      0.0,
+      0.4999999701976776,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/ctmf_net/seed_44/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.9152542372881356,
+    "cohen_kappa": 0.8538880633977217,
+    "macro_f1": 0.9213609372492377,
+    "macro_sensitivity": 0.9172979797979798,
+    "macro_specificity": 0.9460345855694693,
+    "macro_auroc_ovr": 0.9458502172891707,
+    "macro_average_precision": 0.9273524117079092,
+    "confusion_matrix": [
+      [
+        62,
+        4,
+        0
+      ],
+      [
+        6,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.9117647058823529,
+        "sensitivity_recall": 0.9393939393939394,
+        "specificity": 0.8846153846153846,
+        "f1": 0.9253731343283582,
+        "auroc_ovr": 0.928030303030303,
+        "average_precision": 0.8980064398519705
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.8666666666666667,
+        "sensitivity_recall": 0.8125,
+        "specificity": 0.9534883720930233,
+        "f1": 0.8387096774193549,
+        "auroc_ovr": 0.9095203488372093,
+        "average_precision": 0.8840507952717567
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.8559322033898306,
+    "cohen_kappa": 0.7505595622979359,
+    "macro_f1": 0.8651285164946367,
+    "macro_sensitivity": 0.860479797979798,
+    "macro_specificity": 0.9087656529516995,
+    "macro_auroc_ovr": 0.9387439917963173,
+    "macro_average_precision": 0.9117396043069892,
+    "confusion_matrix": [
+      [
+        59,
+        7,
+        0
+      ],
+      [
+        10,
+        22,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.855072463768116,
+        "sensitivity_recall": 0.8939393939393939,
+        "specificity": 0.8076923076923077,
+        "f1": 0.8740740740740741,
+        "auroc_ovr": 0.9172494172494172,
+        "average_precision": 0.9240443242164771
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.7586206896551724,
+        "sensitivity_recall": 0.6875,
+        "specificity": 0.9186046511627907,
+        "f1": 0.7213114754098361,
+        "auroc_ovr": 0.8989825581395349,
+        "average_precision": 0.8111744887044903
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "ctmf_net_seed44_test_predictions.csv",
+  "json_report_file": "ctmf_net_seed44_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/ctmf_net/seed_44/training_history.json"
+}
