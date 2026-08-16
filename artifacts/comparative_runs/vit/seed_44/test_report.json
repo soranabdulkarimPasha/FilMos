@@ -1,0 +1,144 @@
+{
+  "model_key": "vit",
+  "display_name": "ViT",
+  "implementation_scope": "Standalone ViT-B/16-style baseline with 16x16 patches, six encoder blocks, 128-dimensional tokens and four attention heads. This implements the requested ViT model, not a multi-checkpoint ensemble.",
+  "protocol": {
+    "image_size": 128,
+    "batch_size": 32,
+    "epochs": 24,
+    "patience": 6,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "weight_decay": 0.0001,
+    "class_weight_power": 0.65,
+    "label_smoothing": 0.02,
+    "seed": 44,
+    "num_workers": 0,
+    "use_tta": true,
+    "best_epoch": 7,
+    "device": "cuda",
+    "trainable_parameters": 1297155,
+    "training_seconds": 313.620050446003,
+    "validation_bias": [
+      0.0,
+      0.3999999761581421,
+      -2.9802322387695312e-08
+    ],
+    "checkpoint": "artifacts/comparative_runs/vit/seed_44/best_checkpoint.pt",
+    "manifest": "data/busi_split_seed42.csv",
+    "test_labels_used_for_selection": false
+  },
+  "validation": {
+    "accuracy": 0.8389830508474576,
+    "cohen_kappa": 0.7089067774603999,
+    "macro_f1": 0.832138832544512,
+    "macro_sensitivity": 0.8181818181818182,
+    "macro_specificity": 0.8858079904591533,
+    "macro_auroc_ovr": 0.8807377215807448,
+    "macro_average_precision": 0.8291168852895625,
+    "confusion_matrix": [
+      [
+        63,
+        3,
+        0
+      ],
+      [
+        16,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.7974683544303798,
+        "sensitivity_recall": 0.9545454545454546,
+        "specificity": 0.6923076923076923,
+        "f1": 0.8689655172413793,
+        "auroc_ovr": 0.8391608391608392,
+        "average_precision": 0.8142644001176649
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.8421052631578947,
+        "sensitivity_recall": 0.5,
+        "specificity": 0.9651162790697675,
+        "f1": 0.6274509803921569,
+        "auroc_ovr": 0.8030523255813953,
+        "average_precision": 0.6730862557510227
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.8389830508474576,
+    "cohen_kappa": 0.7188362177075496,
+    "macro_f1": 0.8464266567693514,
+    "macro_sensitivity": 0.8396464646464646,
+    "macro_specificity": 0.8959451401311865,
+    "macro_auroc_ovr": 0.9135973441932744,
+    "macro_average_precision": 0.85157546570668,
+    "confusion_matrix": [
+      [
+        59,
+        7,
+        0
+      ],
+      [
+        12,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        20
+      ]
+    ],
+    "classwise": {
+      "benign": {
+        "support": 66,
+        "precision": 0.8309859154929577,
+        "sensitivity_recall": 0.8939393939393939,
+        "specificity": 0.7692307692307693,
+        "f1": 0.8613138686131386,
+        "auroc_ovr": 0.8843240093240093,
+        "average_precision": 0.8953687265670733
+      },
+      "malignant": {
+        "support": 32,
+        "precision": 0.7407407407407407,
+        "sensitivity_recall": 0.625,
+        "specificity": 0.9186046511627907,
+        "f1": 0.6779661016949152,
+        "auroc_ovr": 0.856468023255814,
+        "average_precision": 0.6593576705529665
+      },
+      "normal": {
+        "support": 20,
+        "precision": 1.0,
+        "sensitivity_recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "auroc_ovr": 1.0,
+        "average_precision": 1.0000000000000002
+      }
+    }
+  },
+  "prediction_file": "vit_seed44_test_predictions.csv",
+  "json_report_file": "vit_seed44_test_report.json",
+  "training_history_file": "artifacts/comparative_runs/vit/seed_44/training_history.json"
+}
